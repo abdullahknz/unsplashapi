@@ -1,17 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar color="dark">
+        <ion-title>Unsplash App</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content no-padding color="secondary">
+    <ion-card *ngFor="let image of images">
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="{{image.user.profile_image.small}}" alt="userimage">
+            </ion-avatar>
+            <h2>{{image.user.name}}</h2>
+            <p>{{image.user.location}}</p>
+        </ion-item>
+        <img src="{{image.urls.regular}}" alt="">
+        <ion-item>
+            <ion-icon name="heart" color="danger" item-left></ion-icon>
+            <h2>{{image.likes}}</h2>
+            <p item-right>{{image.updated_at}}</p>
+        </ion-item>
+    </ion-card>
 </ion-content>
