@@ -13,7 +13,7 @@ export class UnsplashServiceProvider {
 
   load() {
     //client_id yani app id set etmemiz gerekiyor.
-    var client_id = 'f8d4dfac644066a84bf50ad3070ca9bba0d13698a487200f048ecf0e1d0b6fe4'
+    var client_id = 'buraya application id gelecek'
   
   if (this.data) {
     // datamız var mı diye kontrol ediyoruz.
